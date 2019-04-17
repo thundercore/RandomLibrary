@@ -8,7 +8,5 @@ library GenerateRandomNumber {
                 revert(0, 0)
             }
         }
-
-        return value;
     }
 }
