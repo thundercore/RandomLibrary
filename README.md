@@ -6,6 +6,6 @@ Interaction with this Solidity library is as easy as the following:
 * Navigate to remix.ethereum.org, and import your smart contract.
 * Under your Solidity version declaration (alongside other imports), copy and paste the following: 'import "http://github.com/thundercore/RandomLibrary/RandomLibrary.sol"
 * You can now interact with the random number generator like so: GenerateRandom.getRandom()!
-* The random number generator will always return a bytes32 value, so you will need to cast/convert this value to best suit your needs.
+* The random number generator will always return a bytes32 value, so you will need to cast/convert this value as it best suits your needs.
 
 Happy coding!
