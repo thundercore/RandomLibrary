@@ -9,3 +9,40 @@ Interaction with this Solidity library is as easy as the following:
 * The random number generator will always return a bytes32 value, so you will need to cast/convert this value as it best suits your needs.
 
 Happy coding!
+
+Basic example:
+
+```
+    pragma solidity ^0.4.25;
+    
+    import "http://github.com/thundercore/RandomLibrary/RandomLibrary.sol";
+
+    contract RandomExample {
+        event didWin(bool);
+        uint256 public contractBalance;
+        
+        constructor() payable {
+            contractBalance = uint256(msg.value);
+        }
+        
+        function betNumber(uint256 bet) payable external returns (bool) {
+            if (msg.value < 5) {
+                didWin(false);
+                return false;
+            }
+            
+            uint256 randomNumber = GenerateRandomNumber.generateRandom();
+            if (bet < randomNumber) {
+                msg.sender.transfer(msg.value+1);
+                didWin(true);
+                
+                contractBalance = contractBalance - (msg.value+1);
+                return true;
+            } 
+            
+            contractBalance = contractBalance + msg.value;
+            didWin(false);
+            return false;
+        }
+    }
+ ```
