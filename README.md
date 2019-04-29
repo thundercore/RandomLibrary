@@ -10,7 +10,7 @@ Interaction with this Solidity library is as easy as the following:
 
 Happy coding!
 
-Basic example:
+In the basic example shown below, a random number is used to determine whether the contract will pay the user. If the number is greater than the bet from the user, the contract takes the user's wager. If not, the contract pays the user their own bet plus 1.
 
 ```
     pragma solidity ^0.4.25;
