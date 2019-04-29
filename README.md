@@ -27,6 +27,8 @@ Basic example:
         
         function betNumber(uint256 bet) payable external returns (bool) {
             if (msg.value < 5) {
+                contractBalance = contractBalance + msg.value;
+                        
                 didWin(false);
                 return false;
             }
