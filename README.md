@@ -5,7 +5,7 @@ The ThunderCore blockchain has an internal random number generation function. We
 Interaction with this Solidity library is as easy as the following:
 * Navigate to remix.ethereum.org, and import your smart contract.
 * Under your Solidity version declaration (alongside other imports), copy and paste the following: 'import "http://github.com/thundercore/RandomLibrary/RandomLibrary.sol"
-* You can now interact with the random number generator like so: GenerateRandomNumber.generateRandom()!
+* You can now interact with the random number generator like so: LibThunderRNG.rand()!
 * The random number generator will always return a bytes32 value, so you will need to cast/convert this value as it best suits your needs.
 
 Happy coding!
@@ -33,7 +33,7 @@ In the basic example shown below, a random number is used to determine whether t
                 return false;
             }
             
-            uint256 randomNumber = GenerateRandomNumber.generateRandom();
+            uint256 randomNumber = LibThunderRNG.rand();
             if (bet < randomNumber) {
                 msg.sender.transfer(msg.value+1);
                 didWin(true);
