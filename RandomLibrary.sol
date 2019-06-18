@@ -1,4 +1,4 @@
-pragma solidity ^0.4.19;
+pragma solidity >=0.4.19;
 
 library LibThunderRNG {
     function rand() internal returns (uint256) {
