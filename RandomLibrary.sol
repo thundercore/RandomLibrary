@@ -1,5 +1,7 @@
 pragma solidity >=0.4.19;
 
+// Deprecated
+// This function/library is deprecated due to its difficult-to-understand code and has been replaced with more modern alternatives.
 library LibThunderRNG {
     function rand() internal returns (uint256) {
         uint256[1] memory m;
