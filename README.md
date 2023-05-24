@@ -70,7 +70,7 @@ contract RandomExampleInterfaceVersion {
             sender.transfer(msg.value+1);
             emit didWin(true);
 
-            contractBalance = contractBalance - (msg.value+1);
+            contractBalance = contractBalance - 1;
             return true;
         }
 
